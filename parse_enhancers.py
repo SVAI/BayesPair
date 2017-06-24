@@ -17,7 +17,7 @@ with open('vista_enhancers.txt', 'r') as f:
 enhancer_vcfs = []
 
 with open('/mnt/disks/data-vcf/GSN79Tumor_normal.vcf', 'r') as f:
-	entries = vcf.reader(f)
+	entries = vcf.Reader(f)
 	for entry in entries:
 		chrom = str(entry.CHROM)
 		enhancers = enhancer_regions[chrom]
